@@ -6,79 +6,109 @@
 <title>Architecture Laptop Decision</title>
 
 <style>
+:root {
+    --bg: #0f1115;
+    --card: #161b22;
+    --muted: #9aa4b2;
+    --accent: #1f6feb;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    background: #0f1115;
-    color: #ffffff;
-    line-height: 1.75;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: white;
+    line-height: 1.65;
 }
 
 header {
-    padding: 120px 20px;
+    padding: 80px 20px 50px 20px;
     text-align: center;
-    background: linear-gradient(135deg, #151922, #0d1016);
+    border-bottom: 1px solid #1c2128;
 }
 
 h1 {
-    font-size: 46px;
-    margin-bottom: 15px;
+    font-size: 40px;
+    margin: 0 0 12px 0;
 }
 
-h2 {
-    font-size: 32px;
-    margin-bottom: 25px;
+.subtitle {
+    color: var(--muted);
+    font-size: 18px;
 }
 
 section {
-    max-width: 1000px;
-    margin: auto;
-    padding: 90px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+h2 {
+    font-size: 26px;
+    margin-bottom: 18px;
 }
 
 .card {
-    background: #161b22;
-    padding: 35px;
-    border-radius: 14px;
-    margin-bottom: 40px;
+    background: var(--card);
+    padding: 28px;
+    border-radius: 12px;
+    margin-top: 18px;
+}
+
+p {
+    margin: 10px 0;
 }
 
 ul {
-    margin-top: 15px;
+    margin: 12px 0 0 18px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+.muted {
+    color: var(--muted);
 }
 
 .highlight {
-    background: #1f6feb;
-    padding: 35px;
-    border-radius: 14px;
-    text-align: center;
-    font-size: 22px;
-    margin-top: 60px;
+    background: var(--accent);
+    padding: 28px;
+    border-radius: 12px;
+    margin-top: 30px;
+    font-size: 18px;
 }
 
-.compare-table {
+.table-wrap {
+    overflow-x: auto;
+    margin-top: 18px;
+}
+
+table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 40px;
+    font-size: 15px;
 }
 
-.compare-table th,
-.compare-table td {
-    padding: 18px;
+th, td {
+    padding: 14px;
     text-align: center;
 }
 
-.compare-table th {
+th {
     background: #21262d;
 }
 
-.compare-table tr:nth-child(even) {
+tr:nth-child(even) {
     background: #1c2128;
 }
 
-.emphasis {
-    font-size: 20px;
-    margin-top: 20px;
+.footer-space {
+    height: 60px;
 }
 </style>
 </head>
@@ -86,242 +116,112 @@ ul {
 <body>
 
 <header>
-<h1>ASUS Vivobook Pro 16 vs HP Victus</h1>
-<p>Choosing Power vs Choosing Balance</p>
+    <h1>Vivobook Pro 16 vs HP Victus</h1>
+    <div class="subtitle">Choosing Balance vs Choosing Raw Power</div>
 </header>
 
 <section>
+    <h2>The Real Question</h2>
+    <div class="card">
+        <p>Yes — the RTX 5050 inside the Victus is approximately <strong>15–23% stronger</strong> in GPU benchmarks than the RTX 4050 in the Vivobook.</p>
 
-<h2>The Honest Starting Point</h2>
+        <p>That translates to:</p>
+        <ul>
+            <li>Slightly smoother very heavy scenes</li>
+            <li>Slightly faster GPU-heavy render previews</li>
+        </ul>
 
-<div class="card">
-<p>
-Yes — the HP Victus with RTX 5050 is stronger in raw GPU benchmarks.
-</p>
+        <p>In real academic terms: a 10-minute render might become 8–9 minutes.</p>
 
-<ul>
-<li>~15–23% higher 3D benchmark scores</li>
-<li>8GB VRAM vs 6GB</li>
-<li>Slightly faster GPU-heavy rendering tasks</li>
-</ul>
-
-<p>
-That advantage is real.
-</p>
-
-<p>
-But raw benchmark uplift does not automatically translate into a dramatically different daily experience.
-</p>
-</div>
-
+        <p>That is real. But it is incremental — not transformational.</p>
+    </div>
 </section>
 
 <section>
+    <h2>What Gets Felt Every Day</h2>
 
-<h2>The 20% Question</h2>
+    <div class="card">
+        <p><strong>Weight:</strong> 1.9 kg (Vivobook) vs 2.29 kg (Victus)</p>
+        <p class="muted">~400g difference — roughly the weight of another textbook.</p>
+        <p>Architecture students already carry boards, models, and materials. Weight compounds daily.</p>
+    </div>
 
-<div class="card">
-<p>
-In most academic architecture scenes, that ~20% uplift typically means:
-</p>
+    <div class="card">
+        <p><strong>Battery:</strong> 96Wh (Vivobook) vs ~70Wh (Victus)</p>
+        <p>Under moderate CAD workloads:</p>
+        <ul>
+            <li>Vivobook: ~2–3 hours usable modeling</li>
+            <li>Victus: ~1.5–2 hours</li>
+        </ul>
+        <p>Battery determines freedom during commute and studio work without outlets.</p>
+    </div>
 
-<ul>
-<li>A render that takes <strong>10 minutes</strong> may take <strong>8–9 minutes</strong> instead.</li>
-<li>A viewport may feel <strong>slightly smoother</strong> in extremely dense models.</li>
-</ul>
-
-<p>
-That is useful.
-</p>
-
-<p>
-But it is not transformational.
-</p>
-
-<p class="emphasis">
-Now ask the real question:
-</p>
-
-<ul>
-<li>Is that 10–20% uplift worth <strong>+400 grams every single day?</strong></li>
-<li>Is it worth a <strong>smaller battery?</strong></li>
-<li>Is it worth a <strong>gaming-oriented design bias?</strong></li>
-<li>Is it worth a <strong>lower contrast IPS display instead of OLED?</strong></li>
-</ul>
-
-<p>
-That is the actual trade-off.
-</p>
-</div>
-
+    <div class="card">
+        <p><strong>Display:</strong> OLED vs IPS 144Hz</p>
+        <p>Architecture is visual critique work. Contrast and depth matter more than refresh rate.</p>
+        <p>OLED improves presentation clarity and material perception.</p>
+    </div>
 </section>
 
 <section>
+    <h2>Behavioral Fit</h2>
+    <div class="card">
+        <p><strong>Victus</strong> is optimized for sustained GPU output.</p>
+        <p><strong>Vivobook</strong> is optimized for balanced creative workflows.</p>
 
-<h2>Battery & Daily Freedom</h2>
-
-<div class="card">
-<p><strong>Vivobook:</strong> 96Wh battery</p>
-<p><strong>Victus:</strong> ~70Wh battery</p>
-
-<p>
-Under moderate architecture workloads:
-</p>
-
-<ul>
-<li>Vivobook: ~2–3 hours of productive CAD/modelling use</li>
-<li>Victus: ~1.5–2 hours under similar load</li>
-</ul>
-
-<p>
-On a 2-hour commute, that difference changes how freely you can work.
-</p>
-
-<p>
-Gaming machines prioritize sustained GPU output.  
-Creator machines prioritize balanced endurance.
-</p>
-</div>
-
+        <p>Architecture school is balanced creative work — not sustained GPU stress testing.</p>
+    </div>
 </section>
 
 <section>
+    <h2>Decision Matrix</h2>
 
-<h2>Weight Is a Daily Variable</h2>
-
-<div class="card">
-<p><strong>Vivobook:</strong> ~1.9 kg</p>
-<p><strong>Victus:</strong> ~2.29 kg</p>
-
-<p>
-That ~400g difference equals roughly the weight of an additional textbook.
-</p>
-
-<p>
-Architecture students already carry:
-</p>
-
-<ul>
-<li>Boards</li>
-<li>Models</li>
-<li>Materials</li>
-<li>Files</li>
-</ul>
-
-<p>
-Weight compounds. Every day.
-</p>
-
-<p>
-The Vivobook reduces friction.  
-The Victus adds it.
-</p>
-</div>
-
+    <div class="table-wrap">
+        <table>
+            <tr>
+                <th>Category</th>
+                <th>Vivobook</th>
+                <th>Victus</th>
+            </tr>
+            <tr>
+                <td>Raw GPU</td>
+                <td>Strong</td>
+                <td>Stronger</td>
+            </tr>
+            <tr>
+                <td>Battery</td>
+                <td>Better</td>
+                <td>Lower</td>
+            </tr>
+            <tr>
+                <td>Weight</td>
+                <td>Better</td>
+                <td>Heavier</td>
+            </tr>
+            <tr>
+                <td>Display</td>
+                <td>OLED</td>
+                <td>IPS</td>
+            </tr>
+            <tr>
+                <td>Daily Suitability</td>
+                <td>Excellent</td>
+                <td>Good</td>
+            </tr>
+        </table>
+    </div>
 </section>
 
 <section>
+    <div class="highlight">
+        The Victus wins on raw GPU output.  
+        The Vivobook wins on balance, endurance, portability, and design clarity.  
 
-<h2>Display: The Silent Advantage</h2>
-
-<div class="card">
-<p><strong>Vivobook:</strong> OLED panel</p>
-<p><strong>Victus:</strong> IPS 144Hz panel</p>
-
-<p>
-Architecture is visual work.
-</p>
-
-<ul>
-<li>OLED offers deeper blacks and better contrast.</li>
-<li>Better for design critique and presentation.</li>
-<li>Higher perceived clarity in renders and material depth.</li>
-</ul>
-
-<p>
-Refresh rate matters for gaming.  
-Contrast matters for design.
-</p>
-</div>
-
+        For a traveling architecture student, balance is the more intelligent long-term strategy.
+    </div>
 </section>
 
-<section>
-
-<h2>Real Usage Scenarios</h2>
-
-<div class="card">
-<p><strong>Commute / Travel:</strong></p>
-<p>Reviewing models, small edits, light SketchUp work.</p>
-<p><strong>Winner: Vivobook</strong></p>
-</div>
-
-<div class="card">
-<p><strong>Studio With Power:</strong></p>
-<p>Heavy rendering or real-time visualization.</p>
-<p>Victus may complete tasks slightly faster — but the difference remains moderate.</p>
-</div>
-
-<div class="card">
-<p><strong>Presentation & Critique:</strong></p>
-<p>OLED display enhances visual depth and clarity.</p>
-<p><strong>Winner: Vivobook</strong></p>
-</div>
-
-</section>
-
-<section>
-
-<h2>Decision Matrix</h2>
-
-<table class="compare-table">
-<tr>
-<th>Category</th>
-<th>Vivobook</th>
-<th>Victus</th>
-</tr>
-<tr>
-<td>Raw GPU</td>
-<td>Strong</td>
-<td>Stronger</td>
-</tr>
-<tr>
-<td>Battery</td>
-<td>Better</td>
-<td>Lower</td>
-</tr>
-<tr>
-<td>Weight</td>
-<td>Better</td>
-<td>Heavier</td>
-</tr>
-<tr>
-<td>Display</td>
-<td>OLED</td>
-<td>IPS</td>
-</tr>
-<tr>
-<td>Daily Suitability</td>
-<td>Excellent</td>
-<td>Good</td>
-</tr>
-</table>
-
-</section>
-
-<section>
-
-<div class="highlight">
-The HP Victus offers more raw GPU power.  
-But architecture students do not optimize for raw GPU power alone.  
-
-They optimize for portability, endurance, clarity, and balanced performance.  
-
-For a traveling architecture student —  
-<strong>ASUS Vivobook Pro 16 is the more intelligent long-term choice.</strong>
-</div>
-
-</section>
+<div class="footer-space"></div>
 
 </body>
 </html>
