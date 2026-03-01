@@ -4,235 +4,297 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Architecture Laptop Decision</title>
+
 <style>
-    body {
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-        background: #0f1115;
-        color: #ffffff;
-    }
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background: #0f1115;
+    color: #ffffff;
+    line-height: 1.7;
+}
 
-    header {
-        padding: 60px 20px;
-        text-align: center;
-        background: linear-gradient(135deg, #1a1f2b, #101318);
-    }
+header {
+    padding: 100px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #151922, #0d1016);
+}
 
-    h1 {
-        font-size: 42px;
-        margin-bottom: 10px;
-    }
+h1 {
+    font-size: 44px;
+    margin-bottom: 15px;
+}
 
-    h2 {
-        margin-top: 50px;
-        text-align: center;
-        font-size: 28px;
-    }
+h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
 
-    .container {
-        max-width: 1100px;
-        margin: auto;
-        padding: 20px;
-    }
+section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 80px 20px;
+}
 
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 30px;
-        background: #161b22;
-        border-radius: 12px;
-        overflow: hidden;
-    }
+.card {
+    background: #161b22;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
 
-    th, td {
-        padding: 18px;
-        text-align: center;
-    }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
 
-    th {
-        background: #21262d;
-        font-weight: 600;
-    }
+th, td {
+    padding: 16px;
+    text-align: center;
+}
 
-    tr:nth-child(even) {
-        background: #1c2128;
-    }
+th {
+    background: #21262d;
+}
 
-    .highlight {
-        background: #1f6feb;
-        font-weight: bold;
-    }
+tr:nth-child(even) {
+    background: #1c2128;
+}
 
-    .section {
-        margin-top: 60px;
-    }
+.highlight {
+    background: #1f6feb;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 40px;
+}
 
-    .card {
-        background: #161b22;
-        padding: 25px;
-        border-radius: 12px;
-        margin-top: 20px;
-    }
-
-    .good {
-        color: #3fb950;
-        font-weight: bold;
-    }
-
-    .better {
-        color: #1f6feb;
-        font-weight: bold;
-    }
-
-    footer {
-        text-align: center;
-        padding: 40px 20px;
-        margin-top: 60px;
-        background: #101318;
-        font-size: 14px;
-        opacity: 0.7;
-    }
-
-    @media (max-width: 768px) {
-        h1 {
-            font-size: 30px;
-        }
-        table {
-            font-size: 14px;
-        }
-    }
+.small {
+    font-size: 14px;
+    opacity: 0.7;
+}
 </style>
 </head>
 
 <body>
 
 <header>
-    <h1>Which Laptop Makes More Sense?</h1>
-    <p>Architecture Student Comparison: RTX 4050 vs RTX 5050</p>
+<h1>ASUS Vivobook Pro 16 vs HP Victus</h1>
+<p>Which Laptop Actually Makes More Sense for an Architecture Student?</p>
 </header>
 
-<div class="container">
+<section>
 
-<h2>Quick Spec Comparison</h2>
-
-<table>
-<tr>
-    <th>Feature</th>
-    <th>ASUS Vivobook Pro 16 (RTX 4050)</th>
-    <th>HP Victus (RTX 5050)</th>
-</tr>
-<tr>
-    <td>GPU</td>
-    <td>RTX 4050 (6GB)</td>
-    <td>RTX 5050 (8GB)</td>
-</tr>
-<tr>
-    <td>Performance Difference</td>
-    <td>Baseline</td>
-    <td>~20% Faster</td>
-</tr>
-<tr>
-    <td>Battery (Light Use)</td>
-    <td class="better">4–6 Hours</td>
-    <td>4–5 Hours</td>
-</tr>
-<tr>
-    <td>Battery (Heavy 3D)</td>
-    <td class="better">2–3 Hours</td>
-    <td>1.5–2 Hours</td>
-</tr>
-<tr>
-    <td>Weight</td>
-    <td class="better">~1.9 kg</td>
-    <td>~2.3 kg</td>
-</tr>
-<tr>
-    <td>Display Quality</td>
-    <td class="better">OLED (Superior Contrast)</td>
-    <td>IPS</td>
-</tr>
-<tr>
-    <td>Portability</td>
-    <td class="better">Travel Friendly</td>
-    <td>Heavier Gaming Build</td>
-</tr>
-</table>
-
-<div class="section">
-<h2>Real-World Architecture Usage</h2>
+<h2>1. The GPU Reality</h2>
 
 <div class="card">
-<h3>2D CAD (AutoCAD, CorelDRAW)</h3>
-<p>Both laptops perform <span class="good">excellent</span>. No noticeable difference.</p>
-</div>
+<p><strong>Vivobook:</strong> RTX 4050 (6GB VRAM)</p>
+<p><strong>Victus:</strong> RTX 5050 (8GB VRAM)</p>
 
-<div class="card">
-<h3>3D Modelling (SketchUp, Rhino, Revit)</h3>
-<p>Victus is slightly smoother with very heavy scenes.<br>
-Vivobook handles student-level projects <span class="good">extremely well</span>.</p>
-</div>
+<p>
+The RTX 5050 provides approximately <strong>15–23% higher raw 3D performance</strong> compared to the RTX 4050 in benchmark testing.
+</p>
 
-<div class="card">
-<h3>Real-Time Rendering (Twinmotion, Enscape)</h3>
-<p>Victus is about <strong>15–20% faster</strong>.<br>
-But the Vivobook still runs these smoothly for academic use.</p>
-</div>
-
-<div class="card">
-<h3>Travel + College Reality</h3>
-<p>She travels 2 hours.<br>
-She carries heavy material already.<br>
-She does not render full projects on a bus.<br><br>
-<span class="better">Vivobook makes more practical sense.</span></p>
-</div>
-</div>
-
-<div class="section">
-<h2>Why Vivobook is the Smarter Choice</h2>
-
-<div class="card">
+<p>
+In practical architecture terms:
+</p>
 <ul>
-<li>✔️ Lighter by ~400 grams (huge difference daily)</li>
-<li>✔️ Better battery efficiency during moderate work</li>
-<li>✔️ OLED screen improves design review & presentation</li>
-<li>✔️ Still powerful enough for all academic architecture workloads</li>
-<li>✔️ More balanced machine overall</li>
+<li>Both handle AutoCAD, Revit, SketchUp, Rhino smoothly.</li>
+<li>Victus performs slightly better in very heavy real-time visualization scenes.</li>
+<li>Vivobook remains fully capable for academic-level rendering and modeling.</li>
 </ul>
-</div>
+
+<p>
+The performance difference exists — but it is not transformative.
+</p>
+
+<p class="small">
+GPU uplift based on aggregated 3DMark and benchmark comparisons (e.g., Nanoreview GPU data).
+</p>
 </div>
 
-<div class="section">
-<h2>The Honest Truth</h2>
+</section>
+
+<section>
+
+<h2>2. CPU Comparison</h2>
 
 <div class="card">
 <p>
-Yes, the RTX 5050 is stronger.<br><br>
-But the performance gap (~20%) does not outweigh:
-<ul>
-<li>Extra weight</li>
-<li>Shorter heavy-use battery</li>
-<li>Gaming-oriented bulk</li>
-</ul>
-For an architecture student, balance > raw GPU power.
+Vivobook uses Intel i7 H-series (or similar H-class CPU).  
+Victus uses Core 7 240H.
+</p>
+
+<p>
+Both are high-performance mobile processors suitable for BIM workflows, Revit, and multi-core modeling tasks.
+</p>
+
+<p>
+There is no meaningful CPU advantage between them for architecture coursework.
 </p>
 </div>
+
+</section>
+
+<section>
+
+<h2>3. Battery Life — The Underrated Factor</h2>
+
+<div class="card">
+<p><strong>Vivobook:</strong> 96Wh battery</p>
+<p><strong>Victus:</strong> ~70Wh battery</p>
+
+<p>
+Typical real-world expectations:
+</p>
+
+<ul>
+<li>Vivobook: ~4–6 hrs light use, ~2–3 hrs moderate CAD</li>
+<li>Victus: ~3.5–5 hrs light use, ~1.5–2 hrs moderate CAD</li>
+</ul>
+
+<p>
+Gaming-oriented machines like the Victus prioritize sustained GPU power over efficiency.
+</p>
+
+<p>
+For a student commuting ~2 hours, that difference matters.
+</p>
 </div>
 
-<div class="section">
+</section>
+
+<section>
+
+<h2>4. Weight & Daily Carry</h2>
+
+<div class="card">
+<p><strong>Vivobook:</strong> ~1.9 kg</p>
+<p><strong>Victus:</strong> ~2.29 kg</p>
+
+<p>
+That ~400g difference equals the weight of an additional textbook.
+</p>
+
+<p>
+Architecture students already carry:
+</p>
+<ul>
+<li>Drawing materials</li>
+<li>Boards & models</li>
+<li>Files & tools</li>
+</ul>
+
+<p>
+Weight compounds daily. Portability is not a minor detail.
+</p>
+</div>
+
+</section>
+
+<section>
+
+<h2>5. Display Quality</h2>
+
+<div class="card">
+<p><strong>Vivobook:</strong> OLED display</p>
+<p><strong>Victus:</strong> IPS 144Hz panel</p>
+
+<p>
+For architecture, contrast and clarity matter more than refresh rate.
+</p>
+
+<ul>
+<li>OLED provides deeper blacks and stronger visual contrast.</li>
+<li>Better for design critique and presentations.</li>
+<li>Less strain during long editing sessions.</li>
+</ul>
+
+<p>
+Victus display is good — but optimized for gaming smoothness, not design fidelity.
+</p>
+</div>
+
+</section>
+
+<section>
+
+<h2>6. Real-World Use Scenarios</h2>
+
+<div class="card">
+<p><strong>Travel / Commute:</strong></p>
+<p>Model review, small edits, light SketchUp work.</p>
+<p><strong>Winner: Vivobook</strong> — lighter and longer battery.</p>
+</div>
+
+<div class="card">
+<p><strong>Studio with Power Outlet:</strong></p>
+<p>Heavy visualization rendering.</p>
+<p>Victus may complete tasks slightly faster, but difference is moderate.</p>
+</div>
+
+<div class="card">
+<p><strong>Presentation / Critique:</strong></p>
+<p>Vivobook OLED enhances visual clarity during reviews.</p>
+</div>
+
+</section>
+
+<section>
+
+<h2>Decision Matrix</h2>
+
+<table>
+<tr>
+<th>Category</th>
+<th>Vivobook</th>
+<th>Victus</th>
+</tr>
+<tr>
+<td>Raw GPU Power</td>
+<td>Good</td>
+<td>Better</td>
+</tr>
+<tr>
+<td>Battery Life</td>
+<td>Better</td>
+<td>Lower</td>
+</tr>
+<tr>
+<td>Weight</td>
+<td>Better</td>
+<td>Heavier</td>
+</tr>
+<tr>
+<td>Display</td>
+<td>OLED (Superior)</td>
+<td>IPS</td>
+</tr>
+<tr>
+<td>Daily Student Suitability</td>
+<td>Excellent</td>
+<td>Good</td>
+</tr>
+</table>
+
+</section>
+
+<section>
+
 <h2>Final Recommendation</h2>
 
-<div class="card highlight">
-<p style="font-size: 22px;">
-Choose the ASUS Vivobook Pro 16.<br><br>
-It delivers the best combination of performance, portability, battery, and display quality for architecture studies.
-</p>
+<div class="highlight">
+The HP Victus provides more raw GPU performance.  
+However, the additional weight, smaller battery, and gaming-focused design introduce practical trade-offs.  
+
+For a traveling architecture student balancing portability, battery life, and strong academic performance —  
+
+<strong>ASUS Vivobook Pro 16 offers the better overall balance.</strong>
 </div>
 
-</div>
-
-<footer>
-Designed for clarity. Built for smart decisions.
-</footer>
+</section>
 
 </body>
 </html>
